@@ -1,9 +1,52 @@
-﻿{
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+{
+  "tw_pec_gingertw": {
+    "item": {
+      "name": "糖鼎養生鋪",
+      "image": "/images/store/gingertw@2x.png",
+      "height": "20",
+      "width": "20",
+      "domain": [],
+      "checkout_url": [],
+      "checkout_done_url": [],
+      "image@3x": "/images/store/gingertw@3x.png"
+    },
+    "detail": {
+      "name": "糖鼎養生鋪",
+      "sort": 752,
+      "url": "https://www.gingertw.com/",
+      "image": "https://biggo.com.tw/images/cashback/tw_pec_gingertw@2x.png",
+      "up_rate": "12%",
+      "rate_desc": "12%",
+      "order_day": "1天",
+      "money_day": "105天",
+      "desc": "<ul>\r\n\t<li><span style=\"background-color:#ffffff; color:#000000; font-family:Arial; font-size:13px\"><span class=\"store-cbinfo-cb\">12%</span> <span class=\"store-content\">全館商品</span></span></li>\r\n</ul>\r\n",
+      "alternative_domain": [
+        "www.gingertw.com"
+      ],
+      "affurl": "https://biggo.com.tw/r/?i=tw_pec_gingertw&id=biggo&purl=https%3A%2F%2Fwww.gingertw.com%2F"
+    },
+    "domain": [
+      "www.gingertw.com"
+    ]
+  },
+  "tw_pec_witsper": {
+    "item": {
+      "name": "智選家",
+      "image": "/images/store/witsper@2x.png",
+      "height": "20",
+      "width": "20",
+      "domain": [
+        "www.witsper.com"
+      ],
+      "checkout_url": [],
+      "checkout_done_url": [],
+      "image@3x": "/images/store/witsper@3x.png"
+    },
+    "detail": {
+      "image": "https://biggo.com.tw/images/cashback/tw_pec_witsper@2x.png"
+    },
+    "domain": [
+      "www.witsper.com"
+    ]
+  }
 }
