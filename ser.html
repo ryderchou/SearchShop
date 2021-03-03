@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue@next"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-plus/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-plus/lib/index.full.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+</head>
+      <body>
+
+      <div id="app">
+        <div style="margin-top: 15px; ">
+          <el-input  style="width:500px;" placeholder="请输入内容"  v-model="query"  clearable>
+             <template #append>
+              <el-button icon="el-icon-search" @click="search"></el-button>
+              
+            </template>
+          </el-input>
+    
+          <el-tag type="success">{{ countList }}</el-tag>
+    
+          <div>
+          <li v-for="(item, index) in computedList" :key="item.msg" :data-index="index">
+          {{ item.msg }}
+        </li>
+      </div>
+
+      <div style="background-color: antiquewhite;">
+        <li v-for="(item, index) in searchList" :key="item.msg" :data-index="index">
+          {{ item.msg }}
+        </li>
+      </div>
+
+  <script>
+ const ex = {
+        data() {
+          return {
+            query: "",
+            lessons:[],
+            count:0,
+            searchList:[],
+            list: [
+        { msg: 'Bruce Lee' },
+        { msg: 'Jackie Chan' },
+        { msg: 'Chuck Norris' },
+        { msg: 'Jet Li' },
+        { msg: 'Kung Fury' }
+      ]
+          };
+      
+        },
+        
+        
+        
+         computed: {
+     computedList() {
+       var vm = this
+       return this.list.filter((item) => {
+         return item.msg.toLowerCase().indexOf(vm.query.toLowerCase()) !== -1
+       })       
+     },
+     countList () {       
+      let arr =Object.keys(this.searchList) ;
+      return arr.length;
+    },
+   },
+    methods:{
+      search(){
+         this.searchList = Object.assign({}, this.computedList);
+      },
+    },
+  //     //   mounted() {
+
+  //     //     axios
+  //     // .get('http://localhost:8080/currentprice.json')
+  //     // .then(response => (this.lessons = response))
+        
+
+  // },
+      };
+      
+  
+      Vue.createApp(ex).use(ElementPlus).mount("#app");
+  </script>
+</body>
+</html>
